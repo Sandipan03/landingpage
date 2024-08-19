@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 function Landing({className}) {
   const [model, setmodel] = useState(false)
   useEffect(() => {
-    setTimeout(()=>{setmodel(true)}, 1000)
+    setTimeout(()=>{setmodel(true)}, 2000)
   }, [])
   
     useGSAP(()=>{
