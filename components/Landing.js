@@ -20,8 +20,8 @@ function Landing({className}) {
       ease: "power1.inOut",
       scrollTrigger:{
         trigger:"#front",
-        start: "top -1%",
-        end:"top -5%",
+        start: "top -3%",
+        end:"top -7%",
         pin: true,
         scrub: 0.5,
         // markers: true
@@ -33,8 +33,8 @@ function Landing({className}) {
         ease: "power1.inOut",
         scrollTrigger:{
           trigger:"#front",
-          start: "top -1%",
-          end:"top -5%",
+          start: "top -3%",
+          end:"top -7%",
           pin: true,
           scrub: true,
           // markers: true
@@ -47,8 +47,8 @@ function Landing({className}) {
         // onComplete:()=>setmodel(true),
         scrollTrigger:{
           trigger:"#front",
-          start: "top -1%",
-          end:"top -5%",
+          start: "top -3%",
+          end:"top -7%",
           pin: true,
           scrub: true,
           // markers: true
@@ -84,7 +84,7 @@ function Landing({className}) {
         {/* <img id="bg" src="./background.png" alt="" style={{position:"fixed",width:"100%",height:"100vh", overflow:"hidden"}}/> */}
         <div style={{display:"flex",alignItems:"center",justifyContent:"center",position:"absolute",width:"100vw",height:"100vh"}}>
         {/* <button id="launch" style={{borderRadius:"7px", zIndex:"1",marginTop:"40vh",width:"6opx",height:"40px"}} onClick={handleClick}>Let&#39;s Go</button> */}
-        <img src="./logo.jpeg" alt=""  style={{width:"20%",height:"20%",marginTop:"20vh"}}/>
+        <img src="./logo.jpeg" alt=""  style={{width:"20%",height:"20%",marginTop:"25%",zIndex:"1"}}/>
         </div>
         <Suspense fallback={<dic></dic>}>
         {model && <Spline scene='https://prod.spline.design/6Re8UFR1WXy53RFH/scene.splinecode' style={{width:"100%", height: "100vh", position:"fixed"}}/>}
