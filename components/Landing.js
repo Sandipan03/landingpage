@@ -54,6 +54,18 @@ function Landing({className}) {
           // markers: true
         }
       })
+      .to("#arrow",{
+        opacity:0,
+        y: -100,
+        scrollTrigger:{
+          trigger:"#front",
+          start: "top -3%",
+          end:"top -7%",
+          pin: true,
+          scrub: true,
+          // markers: true
+        }
+      })
       // .from("#launch",{
       //   y: 200,
       //   opacity: 0,
@@ -68,6 +80,14 @@ function Landing({className}) {
       //     // markers: true
       //   }
       // })
+    gsap.to("#arrow",{
+      y:20,
+      duration: 0.5,
+      yoyo:true,
+      repeat: -1,
+      ease: "bounce.out",
+
+    })
     })
     
     const handleClick=()=>{
@@ -82,11 +102,12 @@ function Landing({className}) {
       
         {/* <img src="https://app.gemoo.com/share/image-annotation/683522250515750912?codeId=v6BO6EBXAlEQy&origin=imageurlgenerator&card=683522247906893824" alt="image" /> */}
         {/* <img id="bg" src="./background.png" alt="" style={{position:"fixed",width:"100%",height:"100vh", overflow:"hidden"}}/> */}
-        <div style={{display:"flex",alignItems:"center",justifyContent:"center",position:"absolute",width:"100vw",height:"100vh"}}>
+        <div style={{display:"flex",alignItems:"center",justifyContent:"center",position:"absolute",width:"100vw",height:"100vh",flexDirection:"column"}}>
         {/* <button id="launch" style={{borderRadius:"7px", zIndex:"1",marginTop:"40vh",width:"6opx",height:"40px"}} onClick={handleClick}>Let&#39;s Go</button> */}
         <img src="./logo.jpeg" alt=""  style={{width:"20%",height:"20%"}}/>
+        <h3 id="arrow" style={{zIndex:"1",textDecoration:"underline",color:"#cd0d24", fontSize:"20px"}}>Scroll down &#8595;</h3>
         </div>
-        <Suspense fallback={<dic></dic>}>
+        <Suspense fallback={<div></div>}>
         {model && <Spline scene='https://prod.spline.design/6Re8UFR1WXy53RFH/scene.splinecode' style={{width:"100%", height: "100vh", position:"fixed"}}/>}
         </Suspense>
         <div id="frontImage">
