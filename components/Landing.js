@@ -57,6 +57,7 @@ function Landing({className}) {
       .to("#arrow",{
         opacity:0,
         y: -100,
+
         scrollTrigger:{
           trigger:"#front",
           start: "top -3%",
@@ -111,7 +112,7 @@ function Landing({className}) {
         {model && <Spline scene='https://prod.spline.design/6Re8UFR1WXy53RFH/scene.splinecode' style={{width:"100%", height: "100vh", position:"fixed"}}/>}
         </Suspense>
         <div id="frontImage">
-        <img id="front" src="https://assets-global.website-files.com/63ec206c5542613e2e5aa784/643312a6bc4ac122fc4e3afa_main%20home.webp" alt="image" style={{position:"fixed",width:"100%",height:"100%", zIndex:"1"}}/>
+        <img id="front" src="https://assets-global.website-files.com/63ec206c5542613e2e5aa784/643312a6bc4ac122fc4e3afa_main%20home.webp" alt="image" style={{position:"fixed",width:"100%",height:"100%", zIndex:"0"}}/>
         </div>
         
     </div>
