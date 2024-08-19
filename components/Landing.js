@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 function Landing({className}) {
   const [model, setmodel] = useState(false)
   useEffect(() => {
-    setTimeout(()=>{setmodel(true)}, 2000)
+    setTimeout(()=>{setmodel(true)}, 1000)
   }, [])
   
     useGSAP(()=>{
@@ -54,20 +54,20 @@ function Landing({className}) {
           // markers: true
         }
       })
-      .from("#launch",{
-        y: 200,
-        opacity: 0,
-        duration: 0.5,
-        delay: 0.8,
-        scrollTrigger:{
-          trigger:"#front",
-          start: "top -1%",
-          end:"top -5%",
-          pin: true,
-          scrub: 3,
-          // markers: true
-        }
-      })
+      // .from("#launch",{
+      //   y: 200,
+      //   opacity: 0,
+      //   duration: 0.5,
+      //   delay: 0.8,
+      //   scrollTrigger:{
+      //     trigger:"#front",
+      //     start: "top -1%",
+      //     end:"top -5%",
+      //     pin: true,
+      //     scrub: 3,
+      //     // markers: true
+      //   }
+      // })
     })
     
     const handleClick=()=>{
@@ -78,12 +78,13 @@ function Landing({className}) {
       })
     }
   return (
-    <div className={className} style={{ width: "100%" ,overflow:"hidden"}}>
+    <div className={className} style={{ width: "100%" ,overflow:"hidden",backgroundColor:"white"}}>
       
         {/* <img src="https://app.gemoo.com/share/image-annotation/683522250515750912?codeId=v6BO6EBXAlEQy&origin=imageurlgenerator&card=683522247906893824" alt="image" /> */}
-        <img id="bg" src="./background.png" alt="" style={{position:"fixed",width:"100%",height:"100vh", overflow:"hidden"}}/>
+        {/* <img id="bg" src="./background.png" alt="" style={{position:"fixed",width:"100%",height:"100vh", overflow:"hidden"}}/> */}
         <div style={{display:"flex",alignItems:"center",justifyContent:"center",position:"absolute",width:"100vw",height:"100vh"}}>
-        <button id="launch" style={{borderRadius:"7px", zIndex:"1",marginTop:"40vh",width:"6opx",height:"40px"}} onClick={handleClick}>Let&#39;s Go</button>
+        {/* <button id="launch" style={{borderRadius:"7px", zIndex:"1",marginTop:"40vh",width:"6opx",height:"40px"}} onClick={handleClick}>Let&#39;s Go</button> */}
+        <img src="./logo.jpeg" alt=""  style={{width:"20%",height:"20%",marginTop:"20vh"}}/>
         </div>
         <Suspense fallback={<dic></dic>}>
         {model && <Spline scene='https://prod.spline.design/6Re8UFR1WXy53RFH/scene.splinecode' style={{width:"100%", height: "100vh", position:"fixed"}}/>}
