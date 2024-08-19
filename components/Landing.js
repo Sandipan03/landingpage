@@ -106,7 +106,7 @@ function Landing({className}) {
         <div style={{display:"flex",alignItems:"center",justifyContent:"center",position:"absolute",width:"100vw",height:"100vh",flexDirection:"column"}}>
         {/* <button id="launch" style={{borderRadius:"7px", zIndex:"1",marginTop:"40vh",width:"6opx",height:"40px"}} onClick={handleClick}>Let&#39;s Go</button> */}
         <img src="./logo.jpeg" alt=""  style={{width:"20%",height:"20%"}}/>
-        <h3 id="arrow" style={{zIndex:"1",textDecoration:"underline",color:"white", fontSize:"20px"}}>Scroll down &#8595;</h3>
+        <h3 id="arrow" style={{zIndex:"1",textDecoration:"underline",color:"white", fontSize:"20px",position:"absolute",marginTop:"50vh"}}>Scroll down &#8595;</h3>
         </div>
         <Suspense fallback={<div></div>}>
         {model && <Spline scene='https://prod.spline.design/6Re8UFR1WXy53RFH/scene.splinecode' style={{width:"100%", height: "100vh", position:"fixed"}}/>}
