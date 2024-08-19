@@ -1,4 +1,4 @@
-import React, {useState,Suspense} from 'react'
+import React, {useState,Suspense,useEffect} from 'react'
 import { gsap } from "gsap/dist/gsap";
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -7,6 +7,10 @@ const Spline = React.lazy(() => import("@splinetool/react-spline"));
 gsap.registerPlugin(ScrollTrigger);
 function Landing({className}) {
   const [model, setmodel] = useState(false)
+  useEffect(() => {
+    setTimeout(()=>{setmodel(true)}, 2000)
+  }, [])
+  
     useGSAP(()=>{
       gsap.timeline().to("#front",{
         scale:1.5,
@@ -20,7 +24,7 @@ function Landing({className}) {
         end:"top -5%",
         pin: true,
         scrub: 0.5,
-        markers: true
+        // markers: true
       }
       })
       .to("#bg",{
@@ -40,7 +44,7 @@ function Landing({className}) {
         // scale:0,
         // opacity: 0,
         display:"none",
-        onComplete:()=>setmodel(true),
+        // onComplete:()=>setmodel(true),
         scrollTrigger:{
           trigger:"#front",
           start: "top -1%",
