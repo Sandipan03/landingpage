@@ -82,7 +82,7 @@ function Landing({className}) {
       // })
       
     gsap.to("#arrow",{
-      y:300,
+      y:30,
       delay: 0.5,
       duration: 1.8,
       repeat: -1,
