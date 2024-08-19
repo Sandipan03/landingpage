@@ -80,8 +80,10 @@ function Landing({className}) {
       //     // markers: true
       //   }
       // })
+      
     gsap.to("#arrow",{
       y:300,
+      delay: 0.5,
       duration: 1.8,
       repeat: -1,
       opacity:0
