@@ -84,13 +84,13 @@ function Landing({className}) {
         {/* <img id="bg" src="./background.png" alt="" style={{position:"fixed",width:"100%",height:"100vh", overflow:"hidden"}}/> */}
         <div style={{display:"flex",alignItems:"center",justifyContent:"center",position:"absolute",width:"100vw",height:"100vh"}}>
         {/* <button id="launch" style={{borderRadius:"7px", zIndex:"1",marginTop:"40vh",width:"6opx",height:"40px"}} onClick={handleClick}>Let&#39;s Go</button> */}
-        <img src="./logo.jpeg" alt=""  style={{width:"20%",height:"20%",marginTop:"25%",zIndex:"1"}}/>
+        <img src="./logo.jpeg" alt=""  style={{width:"20%",height:"20%",marginTop:"10%"}}/>
         </div>
         <Suspense fallback={<dic></dic>}>
         {model && <Spline scene='https://prod.spline.design/6Re8UFR1WXy53RFH/scene.splinecode' style={{width:"100%", height: "100vh", position:"fixed"}}/>}
         </Suspense>
         <div id="frontImage">
-        <img id="front" src="https://assets-global.website-files.com/63ec206c5542613e2e5aa784/643312a6bc4ac122fc4e3afa_main%20home.webp" alt="image" style={{position:"absolute",width:"100%",height:"100%", zIndex:"1"}}/>
+        <img id="front" src="https://assets-global.website-files.com/63ec206c5542613e2e5aa784/643312a6bc4ac122fc4e3afa_main%20home.webp" alt="image" style={{position:"fixed",width:"100%",height:"100%", zIndex:"1"}}/>
         </div>
         
     </div>
