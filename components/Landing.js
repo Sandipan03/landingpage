@@ -7,9 +7,9 @@ const Spline = React.lazy(() => import("@splinetool/react-spline"));
 gsap.registerPlugin(ScrollTrigger);
 function Landing({className}) {
   const [model, setmodel] = useState(false)
-  useEffect(() => {
-    setTimeout(()=>{setmodel(true)}, 2000)
-  }, [])
+  // useEffect(() => {
+  //   setTimeout(()=>{setmodel(true)}, 2000)
+  // }, [])
   
     useGSAP(()=>{
       gsap.timeline().to("#front",{
@@ -30,7 +30,7 @@ function Landing({className}) {
       .to("#bg",{
         // scale: 1.2,
         transformOrigin: "center center",
-        // onComplete:()=>setmodel(true),
+        onStart:()=>setmodel(true),
         ease: "power1.inOut",
         scrollTrigger:{
           trigger:"#front",
@@ -82,7 +82,7 @@ function Landing({className}) {
     <div className={className} style={{ width: "100%" , overflow:"hidden"}}>
       
         {/* <img src="https://app.gemoo.com/share/image-annotation/683522250515750912?codeId=v6BO6EBXAlEQy&origin=imageurlgenerator&card=683522247906893824" alt="image" /> */}
-        <img id="bg" src="./background.png" alt="" style={{position:"fixed",width:"100%",height:"100vh", overflow:"hidden"}}/>
+        <img id="bg" src="./background.png" alt="" style={{position:"fixed",width:"100%",height:"100%", overflow:"hidden"}}/>
         {/* <div style={{display:"flex",alignItems:"center",justifyContent:"center",position:"absolute",width:"100vw",height:"100vh"}}>
         <button id="launch" style={{borderRadius:"7px", zIndex:"1",marginTop:"40vh",width:"6opx",height:"40px"}} onClick={handleClick}>Let&#39;s Go</button>
         </div> */}
@@ -90,7 +90,7 @@ function Landing({className}) {
         {model && <Spline scene='https://prod.spline.design/6Re8UFR1WXy53RFH/scene.splinecode' style={{width:"100%", height: "100vh", position:"fixed"}}/>}
         </Suspense>
         <div id="frontImage">
-        <img id="front" src="https://assets-global.website-files.com/63ec206c5542613e2e5aa784/643312a6bc4ac122fc4e3afa_main%20home.webp" alt="image" style={{position:"absolute",width:"100%",height:"100vh", zIndex:"1"}}/>
+        <img id="front" src="https://assets-global.website-files.com/63ec206c5542613e2e5aa784/643312a6bc4ac122fc4e3afa_main%20home.webp" alt="image" style={{position:"absolute",width:"100%",height:"100%", zIndex:"1"}}/>
         </div>
         
     </div>
