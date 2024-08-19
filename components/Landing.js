@@ -30,7 +30,7 @@ function Landing({className}) {
       .to("#bg",{
         // scale: 1.2,
         transformOrigin: "center center",
-        onStart:()=>setmodel(true),
+        onComplete:()=>setmodel(true),
         ease: "power1.inOut",
         scrollTrigger:{
           trigger:"#front",
