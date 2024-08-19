@@ -84,7 +84,7 @@ function Landing({className}) {
         {/* <img id="bg" src="./background.png" alt="" style={{position:"fixed",width:"100%",height:"100vh", overflow:"hidden"}}/> */}
         <div style={{display:"flex",alignItems:"center",justifyContent:"center",position:"absolute",width:"100vw",height:"100vh"}}>
         {/* <button id="launch" style={{borderRadius:"7px", zIndex:"1",marginTop:"40vh",width:"6opx",height:"40px"}} onClick={handleClick}>Let&#39;s Go</button> */}
-        <img src="./logo.jpeg" alt=""  style={{width:"20%",height:"20%",marginTop:"10%"}}/>
+        <img src="./logo.jpeg" alt=""  style={{width:"20%",height:"20%"}}/>
         </div>
         <Suspense fallback={<dic></dic>}>
         {model && <Spline scene='https://prod.spline.design/6Re8UFR1WXy53RFH/scene.splinecode' style={{width:"100%", height: "100vh", position:"fixed"}}/>}
