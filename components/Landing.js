@@ -112,7 +112,12 @@ function Landing({className}) {
         {model && <Spline scene='https://prod.spline.design/6Re8UFR1WXy53RFH/scene.splinecode' style={{width:"100%", height: "100vh", position:"fixed"}}/>}
         </Suspense>
         <div id="frontImage">
-        <img id="front" src="https://assets-global.website-files.com/63ec206c5542613e2e5aa784/643312a6bc4ac122fc4e3afa_main%20home.webp" alt="image" style={{position:"fixed",width:"100%",height:"100%", zIndex:"0"}}/>
+        {/* <img id="front" src="./frontImagePC4.png" alt="image" style={{position:"fixed",width:"100%",height:"100%", zIndex:"0"}}/> */}
+        <picture style={{position:"fixed",width:"100%",height:"100%", zIndex:"0"}}>
+  <source media="(min-width: 800px)" srcSet="./frontImagePC4.png" style={{position:"fixed",width:"100%",height:"100%", zIndex:"0"}}/>
+  {/* <source media="(min-width: 465px)" srcset="img_car.jpg"/> */}
+  <img src="./frontImagePhone.png" style={{position:"fixed",width:"100%",height:"100%", zIndex:"0"}}/>
+</picture>
         </div>
         
     </div>
