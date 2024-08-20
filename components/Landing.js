@@ -113,10 +113,10 @@ function Landing({className}) {
         </Suspense>
         <div id="frontImage">
         {/* <img id="front" src="./frontImagePC4.png" alt="image" style={{position:"fixed",width:"100%",height:"100%", zIndex:"0"}}/> */}
-        <picture style={{position:"fixed",width:"100%",height:"100%", zIndex:"0"}}>
+        <picture id="front" style={{position:"fixed",width:"100%",height:"100%", zIndex:"0"}}>
   <source media="(min-width: 800px)" srcSet="./frontImagePC4.png" style={{position:"fixed",width:"100%",height:"100%", zIndex:"0"}}/>
   {/* <source media="(min-width: 465px)" srcset="img_car.jpg"/> */}
-  <img src="./frontImagePhone.png" style={{position:"fixed",width:"100%",height:"100%", zIndex:"0"}}/>
+  <img src="./frontImagePhone.png"  style={{position:"fixed",width:"100%",height:"100%", zIndex:"0"}}/>
 </picture>
         </div>
         
